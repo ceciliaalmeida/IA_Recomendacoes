@@ -1,10 +1,6 @@
-Instruções
-
-# IA_Recomendacoes
-
 Tarefa : Adicionar Materias de Cada Curso em uma tabela CSV
-Exemplo : 
-Direito - Cod : 01 - 15:
+
+Exemplo : Direito
 nom_materia,cod_materia
 'Direito Administrativo',01
 'Direito Ambiental',02 
