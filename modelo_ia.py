@@ -5,38 +5,31 @@ from keras.models import Dense
 from keras.models import load_model
 
 # Extrai Respostas dos dados de Treinamento
-# Param 'all_data'  -> Dados Coletados : [sensor1, sensor2, sensor3, movimento] (matrix)
-# Return 'ans_data' -> Classificações : [movimento] (matrix)
+# Param 'all_data'  -> Dados Coletados : [cod_1, cod_2, cod_3, cod_4, cod_5, cod_6] (matrix)
+# Return 'ans_data' -> Classificações : [cod_6] (matrix)
 def extract_answers(all_data):
-  ans_data = data_set[:, :3].astype('str')
+  ans_data = data_set[:, :5].astype('int')
   return ans_data
 
 
 # Extrai Valores dos Sensores dos dados de Treinamento
-# Param 'all_data'  -> Dados Coletados : [sensor1, sensor2, sensor3, movimento] (matrix)
-# Return 'sensor_data' -> Dados dos Sensores : [sensor1, sensor2, sensor3] (matrix)
-def extract_sensor_data(all_data):
-  sensor_data = data_set[:, 0:2].astype('float')
-  return sensor_data
+# Param 'all_data'  -> Dados Coletados : [cod_1, cod_2, cod_3, cod_4, cod_5, cod_6] (matrix)
+# Return 'sensor_data' -> Dados do Historico : [cod_1, cod_2, cod_3, cod_4, cod_5] (matrix)
+def extract_data(all_data):
+  subjects_data = data_set[:, 0:4].astype('int')
+  return subjects_data
 
-
-# Normaliza dados do sensor entre valores de 0 a 1
-# Param 'sensor_data'  -> Dados Coletados : [sensor1, sensor2, sensor3] (matrix)
-# Return 'sensor_data' -> Valores Normalizados
-def normalize_data(sensor_data):
-  return sensor_data
 
 data_frame = pd.read_csv('dados_coletados.csv')
 data_set = df.values()
-sensor_data = extract_sensor_data(data_set)
+subjects_data = extract_data(data_set)
 ans_data = extract_answers(data_set)
 
-sensor_data = normalize_data(sensor_data)
 
-# Crição do Modelo 3-3-1
+# Crição do Modelo 5-5-1
 model = Sequential()
-model.add(Dense(3, input_dim=3))
-model.add(Dense(3))
+model.add(Dense(5, input_dim=3))
+model.add(Dense(5))
 model.add(Dense(1))
 
 # Compilação do Modelo
@@ -49,3 +42,11 @@ model.fit(x, y, epochs=3000)
 
 #Salvando Modelo Treinado
 model.save('modelo.h5')
+
+while true:
+  dados = []
+  for i in range(0,5):
+    i = int(input('Codigo Historico ' + str(i+1) + ' :'))
+    dados.append(i)
+  dados = np.asmatrix(dados)
+  model.predict(dados)
