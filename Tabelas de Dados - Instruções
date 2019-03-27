@@ -36,9 +36,9 @@ Ed.Fisica - 08
 
 Tarefa : Adicionar Perfil de Cada Curso em uma tabela CSV
 É necessario colocar os codigos das materias do 01 até o 77 , e dar as notas de acordo com o curso do perfil
-por exemplo , no perfil de direito as materias de direito tem notas de 5 a 4 , e para materias que não tem a 
+por exemplo , no perfil de direito as materias de direito tem notas de 4 a 5 , e para materias que não tem a 
 ver com direito as notas devem ser de 0 a 1 , para cursos que tem materias semelhantes , ex Medicina e Enfermagem 
-colocar materias do curso semelhante com notas de 3-4.
+colocar materias do curso semelhante com notas de 3-4. Nota Max : 5 , Nota Min : 0
 Exemplo : Direito
 
 cod_curso, cod_mat, nota
