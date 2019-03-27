@@ -12,18 +12,13 @@ nom_materia,cod_materia
 'Direito Empresarial',08
 'Direito Internacional',09
 'Direito Penal',10
-'Direito Previdenciário',11
-'Direito Processual',12
-'Direito Societário',13
-'Direito Trabalhista',14
-'Direitos Humanos',15
 
 Definições de Codigos:
-Direito - 0-15
-Ciencias da Comp - 16 - 31 
-Medicina - 32 - 47
-Enfermagem - 48 - 63
-Eng.Civil - 64 - 79
-Psicologia - 80 - 95
-Publicidade - 96 - 111
-Ed.Fisica - 112 - 127
+Direito - 1-10
+Ciencias da Comp - 11 - 21 
+Medicina - 22 - 32
+Enfermagem - 33 - 43
+Eng.Civil - 44 - 54
+Psicologia - 55 - 65
+Publicidade - 66 - 76
+Ed.Fisica - 77 - 87
