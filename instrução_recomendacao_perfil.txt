@@ -1,0 +1,33 @@
+Tarefa : Adicionar Perfis de Cada Curso em uma tabela CSV.
+
+Exemplo: Perfil de Ciência da computação
+
+nom_perfil,cod_curso,nota_perfil
+'ceciliaalmeida',02,1
+'pauloGustavo',02,3
+'marcelopaiva',02,2
+'pedrolucas',02,5
+'pablo',02,6
+'andrearthur',02,4
+'matheusgama',02,5
+'thauanlima',02,3
+'arthur',02,1
+'ana',02,4
+
+Definições de nota de perfil
+
+nao_recomendavel- 1-2
+possível_recomendacao- 3-4
+otima_recomendacao- 5-6
+
+Codigos dos cursos:
+
+Codigos dos Cursos:
+Direito - 01
+Ciencias da Comp - 02
+Medicina - 03
+Enfermagem - 04
+Eng.Civil - 05
+Psicologia - 06
+Publicidade - 07
+Ed.Fisica - 08
